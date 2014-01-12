@@ -1,0 +1,31 @@
+<h1>Listing penyakits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Deskripsi</th>
+      <th>Solusi</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @penyakits.each do |penyakit| %>
+      <tr>
+        <td><%= penyakit.nama %></td>
+        <td><%= penyakit.deskripsi %></td>
+        <td><%= penyakit.solusi %></td>
+        <td><%= link_to 'Show', admin_penyakits_path %></td>
+        <td><%= link_to 'Edit', edit_admin_penyakit_path(penyakit) %></td>
+        <td><%= link_to 'Destroy', admin_penyakits_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Penyakit', new_admin_penyakit_path %>

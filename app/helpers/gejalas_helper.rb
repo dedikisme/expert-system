@@ -1,0 +1,2 @@
+module GejalasHelper
+end

@@ -1,0 +1,2 @@
+module PenyakitsHelper
+end

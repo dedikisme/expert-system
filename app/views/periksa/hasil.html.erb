@@ -1,0 +1,22 @@
+<h1>Periksa#hasil</h1>
+<p>Find me in app/views/periksa/hasil.html.erb</p>
+Nama <%= @nama %>
+<br>
+Alamat <%= @alamat %>
+<br>
+Email <%= @email %>
+<br>
+Data Kerusakan: 
+<%= @penyakit %>
+<br>
+Tanda Kerusakan:
+<ul>
+		<% @gejalas.each do | data | %>
+	<li> <%= data.nama %></li>
+	<% end %>
+</ul>
+<br>
+Solusi
+<%= @solusi %>
+
+<br>

@@ -1,0 +1,17 @@
+<h1>Periksa#cek</h1>
+<p>Find me in app/views/periksa/cek.html.erb</p>
+Nama <%= @nama %>
+<br>
+Alamat <%= @alamat %>
+<br>
+Email <%= @email %>
+<br>
+Apakah <%= @tanya %>
+<%= form_tag("/periksa/proses",:method => "post", :id => "formpesan" )  %>
+<input type='hidden' value='<%= @idgejala %>' name='idgejala'>
+<input type='submit'name="pilihan" class="btn btn-primary" value='ya'> <input name="pilihan" type='submit' class="btn btn-danger" value='tidak'>
+
+</form>
+
+<%= @ar %>
+

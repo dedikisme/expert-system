@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @penyakit.nama %>
+</p>
+
+<p>
+  <strong>Deskripsi:</strong>
+  <%= @penyakit.deskripsi %>
+</p>
+
+<p>
+  <strong>Solusi:</strong>
+  <%= @penyakit.solusi %>
+</p>
+
+<p>
+  <strong>Gejala:</strong>
+  <ul>
+  <% @penyakit.gejalas.each do | data | %>
+   <li><%= data.nama %></li>
+  <% end %>
+</ul>
+<%= link_to 'Edit Gejala', gejala_penyakit_path(@penyakit) %> 
+
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_penyakit_path(@penyakit) %> |
+<%= link_to 'Back', penyakits_path %>

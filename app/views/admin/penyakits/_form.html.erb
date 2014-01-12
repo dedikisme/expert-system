@@ -1,0 +1,29 @@
+<%= form_for(@penyakit) do |f| %>
+  <% if @penyakit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@penyakit.errors.count, "error") %> prohibited this penyakit from being saved:</h2>
+
+      <ul>
+      <% @penyakit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nama %><br>
+    <%= f.text_field :nama %>
+  </div>
+  <div class="field">
+    <%= f.label :deskripsi %><br>
+    <%= f.text_area :deskripsi %>
+  </div>
+  <div class="field">
+    <%= f.label :solusi %><br>
+    <%= f.text_area :solusi %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

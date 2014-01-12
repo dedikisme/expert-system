@@ -1,0 +1,27 @@
+<h1>Listing gejalas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gejalas.each do |gejala| %>
+      <tr>
+        <td><%= gejala.nama %></td>
+        <td><%= link_to 'Show', gejala %></td>
+        <td><%= link_to 'Edit', edit_gejala_path(gejala) %></td>
+        <td><%= link_to 'Destroy', gejala, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gejala', new_gejala_path %>

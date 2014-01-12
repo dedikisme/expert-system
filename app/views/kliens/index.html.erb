@@ -1,0 +1,33 @@
+<h1>Listing kliens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Alamat</th>
+      <th>Email</th>
+      <th>Ip</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kliens.each do |klien| %>
+      <tr>
+        <td><%= klien.nama %></td>
+        <td><%= klien.alamat %></td>
+        <td><%= klien.email %></td>
+        <td><%= klien.ip %></td>
+        <td><%= link_to 'Show', klien %></td>
+        <td><%= link_to 'Edit', edit_klien_path(klien) %></td>
+        <td><%= link_to 'Destroy', klien, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Klien', new_klien_path %>

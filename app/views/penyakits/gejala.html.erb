@@ -1,0 +1,12 @@
+
+Macam Gejala
+
+<%= form_tag("gejalaproses",:method => "post", :id => "formpesan" )  %>
+
+<ul>
+<% @gejala.each do | gdata | %>
+<li> <input name="cekgejala[]" type="checkbox" value="<%= gdata._id %>" <%=  (@ar.include? gdata._id)? "checked" : "" %>> <%= gdata.nama %> </li>
+<% end %>
+</ul>
+	<input type='submit' class="btn btn-primary" value='Kirim'>
+</form>
