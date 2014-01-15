@@ -4,4 +4,6 @@ class Klien
   field :alamat, type: String
   field :email, type: String
   field :ip, type: String
+
+  belongs_to :penyakit
 end

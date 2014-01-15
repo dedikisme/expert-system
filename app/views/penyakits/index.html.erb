@@ -1,31 +1,72 @@
 <h1>Listing penyakits</h1>
+<%= link_to 'New Penyakit', new_penyakit_path, :class=> "btn btn-primary" %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nama</th>
-      <th>Deskripsi</th>
-      <th>Solusi</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<button ng-click="tableParams.sorting({})" class="btn btn-default pull-right">Clear sorting</button>
+    <button ng-click="tableParams.filter({})" class="btn btn-default pull-right">Clear filter</button>
+    <p><strong>Sorting:</strong> {{tableParams.sorting()|json}}
+    <p><strong>Filter:</strong> {{tableParams.filter()|json}}
 
-  <tbody>
-    <% @penyakits.each do |penyakit| %>
-      <tr>
-        <td><%= penyakit.nama %></td>
-        <td><%= penyakit.deskripsi %></td>
-        <td><%= penyakit.solusi %></td>
-        <td><%= link_to 'Show', penyakit %></td>
-        <td><%= link_to 'Edit', edit_penyakit_path(penyakit) %></td>
-        <td><%= link_to 'Destroy', penyakit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+   <table ng-table="tableParams" show-filter="true" class="table">
+        <tr ng-repeat="data in $data">
+                    <td data-title="'Nama'" sortable="'nama'"  filter="{ 'nama': 'text' }">
+                        {{data.nama}}
+                    </td>
+                    <td data-title="'Deskripsi'" sortable="'deskripsi'"  filter="{ 'deskripsi': 'text' }">
+                        {{data.deskripsi}}
+                    </td> 
+                    <td data-title="'Aksi'" width="200">
+                                              <a href="/penyakits/{{data._id.$oid}}" class="btn btn-primary">Lihat</a>
+                        <a href="/penyakits/{{data._id.$oid}}/edit" class="btn btn-warning">Ubah</a>
+
+                        <a href="/penyakits/{{data._id.$oid}}" class="btn btn-danger" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Hapus</a>
+                    </td> 
+                </tr>
+            </table>
+
+
+    <script>
+        var app = angular.module('main', ['ngTable']).
+                controller('DemoCtrl', function($scope, $http,$filter, ngTableParams) {
+                  
+                        
+                  $http.jsonp('http://localhost:3000/penyakits/jsonp?callback=JSON_CALLBACK').success(function(asd) {
+                  var data = asd;
+                  console.log(asd[0]._id.$oid);
+                   $scope.tableParams = new ngTableParams({
+                        page: 1,            // show first page
+                        count: 10,          // count per page
+                        filter: {
+                            nama: 'M'       // initial filter
+                        },
+                        sorting: {
+                            nama: 'asc'     // initial sorting
+                        }
+                    }, {
+                        total: data.length, // length of data
+                        getData: function($defer, params) {
+                            // use build-in angular filter
+                            var filteredData = params.filter() ?
+                                    $filter('filter')(data, params.filter()) :
+                                    data;
+                            var orderedData = params.sorting() ?
+                                    $filter('orderBy')(filteredData, params.orderBy()) :
+                                    data;
+
+                            params.total(orderedData.length); // set total for recalc pagination
+                            $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
+                        }
+                    });
+              });
+
+
+
+                 
+                });
+                          </script>
+
+
+
+
 
 <br>
 
-<%= link_to 'New Penyakit', new_penyakit_path %>

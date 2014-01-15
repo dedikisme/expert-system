@@ -1,12 +1,14 @@
 
-Macam Gejala
+<h2>Macam Gejala Pada <%= @namapenyakit %></h2>
 
 <%= form_tag("gejalaproses",:method => "post", :id => "formpesan" )  %>
-
-<ul>
+<table class="table table-bordered"><tr>
 <% @gejala.each do | gdata | %>
-<li> <input name="cekgejala[]" type="checkbox" value="<%= gdata._id %>" <%=  (@ar.include? gdata._id)? "checked" : "" %>> <%= gdata.nama %> </li>
+<tr><td>
+ <input name="cekgejala[]" type="checkbox" value="<%= gdata._id %>" <%=  (@ar.include? gdata._id)? "checked" : "" %>> </td><td><%= gdata.nama %> </td>
+ </tr>
+
 <% end %>
-</ul>
-	<input type='submit' class="btn btn-primary" value='Kirim'>
+</table>
+    <input type='submit' class="btn btn-primary" value='Kirim'>
 </form>

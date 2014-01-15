@@ -1,0 +1,27 @@
+<div class="span8">
+<h2> Data Kerusakan</h2>
+<% @p.each do | data | %>
+
+<table class="table table-bordered">
+<tr class="success">
+	<td>Kerusakan</td>
+	<td><%= data.nama %></td>
+</tr>
+<tr class="info">
+	<td>Tentang Kerusakan</td>
+	<td><%= data.deskripsi %></td>
+</tr><tr class="warning">
+	<td>Tanda Kerusakan</td>
+	<td><ul>
+		<% data.gejalas.each do | datag | %>
+	<li> <%= datag.nama %></li>
+	<% end %>
+</ul></td>
+</tr><tr class="error">
+	<td>Solusi</td>
+	<td><%= data.solusi %></td>
+</tr>
+</table>
+<% end %>
+
+</div>

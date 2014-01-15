@@ -1,6 +1,7 @@
 class GejalasController < ApplicationController
   before_action :set_gejala, only: [:show, :edit, :update, :destroy]
   before_action :ceklogin
+  layout "admin"
 
   # GET /gejalas
   # GET /gejalas.json

@@ -1,6 +1,7 @@
 class KliensController < ApplicationController
   before_action :set_klien, only: [:show, :edit, :update, :destroy]
   before_action :ceklogin
+  layout "admin"
 
   # GET /kliens
   # GET /kliens.json

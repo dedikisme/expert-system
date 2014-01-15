@@ -1,27 +1,25 @@
 <p id="notice"><%= notice %></p>
+<h2><%= @penyakit.nama %></h2>
+<table class="table table-bordered">
+<tr>
+  <td> <strong>Deskripsi:</strong></td>
+  <td>  <%= @penyakit.deskripsi %>
+</td>
+</tr><tr>
+  <td> <strong>Solusi:</strong></td>
+  <td>    <%= @penyakit.solusi %>
 
-<p>
-  <strong>Nama:</strong>
-  <%= @penyakit.nama %>
-</p>
-
-<p>
-  <strong>Deskripsi:</strong>
-  <%= @penyakit.deskripsi %>
-</p>
-
-<p>
-  <strong>Solusi:</strong>
-  <%= @penyakit.solusi %>
-</p>
-
-<p>
-  <strong>Gejala:</strong>
-  <ul>
+</tr><tr>
+  <td> <strong>Gejala:</strong></td>
+  <td>   <ul>
   <% @penyakit.gejalas.each do | data | %>
    <li><%= data.nama %></li>
   <% end %>
 </ul>
+
+</tr>
+</table>
+  
 <%= link_to 'Edit Gejala', gejala_penyakit_path(@penyakit) %> 
 
 </p>
@@ -30,4 +28,4 @@
 
 
 <%= link_to 'Edit', edit_penyakit_path(@penyakit) %> |
-<%= link_to 'Back', penyakits_path %>
+<a href="/penyakits"> Back</a>

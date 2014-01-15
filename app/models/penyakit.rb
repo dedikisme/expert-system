@@ -5,4 +5,5 @@ class Penyakit
   field :solusi, type: String
 
   has_and_belongs_to_many  :gejalas
+  has_one :klien
 end

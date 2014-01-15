@@ -1,6 +1,7 @@
 class PenyakitsController < ApplicationController
   before_action :set_penyakit, only: [:show, :edit, :update, :destroy, :gejala, :gejalaproses]
   before_action :ceklogin
+  layout "admin"
   # GET /penyakits
   # GET /penyakits.json
   def index
@@ -14,13 +15,38 @@ class PenyakitsController < ApplicationController
 
   end
 
+  def jsonp
+    p=params[:idpenyakit]
+    if p=='' or p==nil
+          datap = Penyakit.all.to_json
+
+    render :json => datap, :callback => params[:callback]
+  else
+
+    datag=Gejala.all.to_a
+    datag.each do | data |
+      data.penyakits.each do | asd |
+        if asd._id.to_s==p
+          data["penyakit"]="checked"
+        end
+      end
+    end
+    
+    render :json => datag.as_json, :callback => params[:callback]
+
+  end
+  end
+
   def gejala
-     ar=Array.new
+         ar=Array.new
      @penyakit.gejalas.each do | data | 
        ar.push(data._id)
       end 
   @ar=ar
+  @namapenyakit=@penyakit.nama
     @gejala=Gejala.order_by()
+
+    
 
     
   end

@@ -1,22 +1,41 @@
-<h1>Periksa#hasil</h1>
-<p>Find me in app/views/periksa/hasil.html.erb</p>
-Nama <%= @nama %>
-<br>
-Alamat <%= @alamat %>
-<br>
-Email <%= @email %>
-<br>
-Data Kerusakan: 
-<%= @penyakit %>
-<br>
-Tanda Kerusakan:
-<ul>
+<div class="span4">
+	<h1>Hasil</h1>
+
+<table class="table table-bordered"> 
+	<tr>
+		<td>Nama</td>
+		<td> <%= @nama %>
+</td>
+	</tr>	
+	<tr>
+		<td>Alamat</td>
+		<td><%= @alamat %></td>
+	</tr>	<tr>
+		<td>Email </td>
+		<td><%= @email %></td>
+	</tr>
+</table>	
+</div>
+<div class="span8">
+<h2> Data Kerusakan</h2>
+<table class="table table-bordered">
+<tr class="success">
+	<td>Kerusakan</td>
+	<td><%= @penyakit %></td>
+</tr>
+<tr class="info">
+	<td>Tentang Kerusakan</td>
+	<td><%= @deskripsi %></td>
+</tr><tr class="warning">
+	<td>Tanda Kerusakan</td>
+	<td><ul>
 		<% @gejalas.each do | data | %>
 	<li> <%= data.nama %></li>
 	<% end %>
-</ul>
-<br>
-Solusi
-<%= @solusi %>
-
-<br>
+</ul></td>
+</tr><tr class="error">
+	<td>Solusi</td>
+	<td><%= @solusi %></td>
+</tr>
+</table>
+</div>

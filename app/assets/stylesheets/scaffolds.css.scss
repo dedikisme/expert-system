@@ -28,7 +28,12 @@ a {
     background-color: #000;
   }
 }
-
+.navbar-text a{
+  color: #fff; 
+}
+a.btn{
+  color: #fff;
+}
 div {
   &.field, &.actions {
     margin-bottom: 10px;
