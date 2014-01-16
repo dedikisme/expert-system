@@ -13,6 +13,22 @@ class KliensController < ApplicationController
   # GET /kliens/1.json
   def show
   end
+  def jsonp
+    datak = Klien.all
+    da=[]
+    ar={}
+    i=0
+
+    datak.each do | data |
+      da[i]={}
+      da[i]=data
+      da[i]['p']=''
+      da[i][:p]=data.penyakit.nama
+    end
+
+    render :json => da.to_json, :callback => params[:callback]
+  
+  end
 
   # GET /kliens/new
   def new

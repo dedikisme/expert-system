@@ -1,27 +1,73 @@
 <h1>Listing gejalas</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nama</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @gejalas.each do |gejala| %>
-      <tr>
-        <td><%= gejala.nama %></td>
-        <td><%= link_to 'Show', gejala %></td>
-        <td><%= link_to 'Edit', edit_gejala_path(gejala) %></td>
-        <td><%= link_to 'Destroy', gejala, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= link_to 'New Gejala', new_gejala_path, :class => "btn btn-primary" %>
+
+
+<button ng-click="tableParams.sorting({})" class="btn btn-default pull-right">Clear sorting</button>
+    <button ng-click="tableParams.filter({})" class="btn btn-default pull-right">Clear filter</button>
+    <p><strong>Sorting:</strong> {{tableParams.sorting()|json}}
+    <p><strong>Filter:</strong> {{tableParams.filter()|json}}
+
+   <table ng-table="tableParams" show-filter="true" class="table">
+        <tr ng-repeat="data in $data">
+                    <td data-title="'Nama'" sortable="'nama'"  filter="{ 'nama': 'text' }">
+                        {{data.nama}}
+                    </td>
+                    <td data-title="'Aksi'" width="200">
+                                              <a href="/gejalas/{{data._id.$oid}}" class="btn btn-primary">Lihat</a>
+                        <a href="/gejalas/{{data._id.$oid}}/edit" class="btn btn-warning">Ubah</a>
+
+                        <a href="/gejalas/{{data._id.$oid}}" class="btn btn-danger" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Hapus</a>
+                    </td> 
+                </tr>
+            </table>
+
+
+    <script>
+    
+        var app = angular.module('main', ['ngTable']).
+                controller('DemoCtrl', function($scope, $http,$filter, ngTableParams) {
+                  
+                        
+                  $http.jsonp('/gejalas/jsonp?callback=JSON_CALLBACK').success(function(asd) {
+                  var data = asd;
+                  console.log(asd[0]._id.$oid);
+                   $scope.tableParams = new ngTableParams({
+                        page: 1,            // show first page
+                        count: 10,          // count per page
+                        filter: {
+                            nama: ''       // initial filter
+                        },
+                        sorting: {
+                            nama: 'desc'     // initial sorting
+                        }
+                    }, {
+                        total: data.length, // length of data
+                        getData: function($defer, params) {
+                            // use build-in angular filter
+                            var filteredData = params.filter() ?
+                                    $filter('filter')(data, params.filter()) :
+                                    data;
+                            var orderedData = params.sorting() ?
+                                    $filter('orderBy')(filteredData, params.orderBy()) :
+                                    data;
+
+                            params.total(orderedData.length); // set total for recalc pagination
+                            $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
+                        }
+                    });
+              });
+
+
+
+                 
+                });
+                          </script>
+
+
+
+
 
 <br>
 
-<%= link_to 'New Gejala', new_gejala_path %>

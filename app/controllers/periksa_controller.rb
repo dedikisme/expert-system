@@ -32,6 +32,7 @@ class PeriksaController < ApplicationController
 
       p=Penyakit.find(arpenyakit[i])
       ar[i]=p.gejalas
+
       if i!=0 
         bandingar = ar[i-1]-ar[i]
         if bandingar.count==0
@@ -42,6 +43,7 @@ class PeriksaController < ApplicationController
         #ada dua penyakits gejala yg sama tak ada beda
       end
     end
+
   end
   if bandingar.count!=0 and double!=1
     break
@@ -50,7 +52,8 @@ class PeriksaController < ApplicationController
 end
 @tanya= bandingar[0].nama
 @idgejala=bandingar[0]._id
-@ban=arpenyakit
+@ban=bandingar
+@penyakit = arpenyakit
 
 end
 
@@ -79,7 +82,7 @@ def proses
         @alamat=cookies[:alamat]
         @email=cookies[:email]
         k=Klien
-        p=penyakits
+        p=Penyakit.find(penyakits[0].to_s)
 
         k.create(:nama=>@nama, :alamat => @alamat, :email => @email, :ip => request.remote_ip, :penyakit => p)
         path = "/periksa/hasil"
@@ -94,10 +97,8 @@ def proses
       @nama=cookies[:nama]
       @alamat=cookies[:alamat]
       @email=cookies[:email]
-      k=Klien
       p=Penyakit.find(cookies[:penyakit])
 
-      k.create(:nama=>@nama, :alamat => @alamat, :email => @email, :ip => request.remote_ip, :penyakit => p)
       @penyakit=p.nama
       @gejalas=p.gejalas
       @deskripsi=p.deskripsi

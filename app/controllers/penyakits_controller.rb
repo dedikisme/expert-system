@@ -54,6 +54,7 @@ class PenyakitsController < ApplicationController
   def gejalaproses
     data=params[:cekgejala]
     @penyakit.gejalas = []
+    
     if data!=nil
     data.each do | datag |
       @penyakit.gejalas << Gejala.find(datag)

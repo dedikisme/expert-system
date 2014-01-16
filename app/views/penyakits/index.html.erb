@@ -25,11 +25,12 @@
 
 
     <script>
+    
         var app = angular.module('main', ['ngTable']).
                 controller('DemoCtrl', function($scope, $http,$filter, ngTableParams) {
                   
                         
-                  $http.jsonp('http://localhost:3000/penyakits/jsonp?callback=JSON_CALLBACK').success(function(asd) {
+                  $http.jsonp('/penyakits/jsonp?callback=JSON_CALLBACK').success(function(asd) {
                   var data = asd;
                   console.log(asd[0]._id.$oid);
                    $scope.tableParams = new ngTableParams({

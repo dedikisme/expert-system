@@ -12,6 +12,11 @@ class GejalasController < ApplicationController
 
   # GET /gejalas/1
   # GET /gejalas/1.json
+def jsonp
+  g=Gejala.all.to_json
+  render :json => g, :callback => params[:callback]
+end
+
   def show
   end
 

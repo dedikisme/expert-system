@@ -9,6 +9,9 @@ Pakar::Application.routes.draw do
   get 'periksa' => 'periksa#index'
   get "penyakits/jsonp"
   get "index/kerusakan"
+  get "kliens/jsonp"
+  get "gejalas/jsonp"
+
 
   resources :kliens
   resources :penyakits
