@@ -3,7 +3,7 @@
 <% @p.each do | data | %>
 
 <table class="table table-bordered">
-<tr class="success">
+<tr class="error">
 	<td>Kerusakan</td>
 	<td><%= data.nama %></td>
 </tr>
@@ -17,7 +17,7 @@
 	<li> <%= datag.nama %></li>
 	<% end %>
 </ul></td>
-</tr><tr class="error">
+</tr><tr class="success">
 	<td>Solusi</td>
 	<td><%= data.solusi %></td>
 </tr>

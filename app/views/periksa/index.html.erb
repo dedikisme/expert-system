@@ -3,14 +3,14 @@
 	<div class="span5">
 <%= form_tag("/periksa/create",:method => "post", :id => "formpesan" )  %>
 <table class="table table-bordered"> <tr><td>
-Nama: </td><td><input type="text" name="nama"></td></tr><tr><td>
-Alamat: </td><td><textarea name="alamat"></textarea></td></tr><tr><td>
-Email: </td><td><input type="text" name="email"></td></tr><tr><td>
+Nama: </td><td><input type="text" name="nama" required></td></tr><tr><td>
+Alamat: </td><td><textarea name="alamat" required></textarea></td></tr><tr><td>
+Email: </td><td><input type="email" name="email" required placeholder="me@domain.com"></td></tr><tr><td>
 	</td><td><input type='submit' class="btn btn-primary" value='Kirim'></td>
 </tr></table>
 </form>
 </div>
 <div class="span6">
-<img src="/img/sml.jpg">
+<img src="/img/sml.jpg" class="img-rounded">
 </div>
 </div>

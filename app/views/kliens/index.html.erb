@@ -1,7 +1,5 @@
 <h1>Listing kliens</h1>
 
-<%= link_to 'New Klien', new_klien_path, :class=> "btn btn-primary" %>
-
 <button ng-click="tableParams.sorting({})" class="btn btn-default pull-right">Clear sorting</button>
     <button ng-click="tableParams.filter({})" class="btn btn-default pull-right">Clear filter</button>
     <p><strong>Sorting:</strong> {{tableParams.sorting()|json}}
@@ -26,9 +24,6 @@
                         {{data.ip}}
                     </td> 
                     <td data-title="'Aksi'" width="200">
-                                              <a href="/kliens/{{data._id.$oid}}" class="btn btn-primary">Lihat</a>
-                        <a href="/kliens/{{data._id.$oid}}/edit" class="btn btn-warning">Ubah</a>
-
                         <a href="/kliens/{{data._id.$oid}}" class="btn btn-danger" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Hapus</a>
                     </td> 
                 </tr>

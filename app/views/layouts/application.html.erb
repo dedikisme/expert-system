@@ -36,14 +36,10 @@
                                         </p>
 
             <% end %>
-
-
-
-
             <ul class="nav">
-              <li><a href="/">Home</a></li>
-              <li><a href="/periksa">Periksa Kerusakan</a></li>
-              <li><a href="/index/kerusakan">Data Kerusakan</a></li>
+              <li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
+  <li class="<%= 'active' if current_page?(periksa_index_path) %>"><%= link_to "Periksa Kerusakan", periksa_index_path %></li>
+  <li class="<%= 'active' if current_page?(index_kerusakan_path) %>"><%= link_to "Daftar Kerusakan", index_kerusakan_path %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -59,7 +55,7 @@
                     <img src="/img/h.jpg" alt="">
                     <div class="carousel-caption">
                       <h4>Sistem Pakar Kerusakan Komputer</h4>
-                      <p>CSistem pakar adalah suatu program komputer yang mengandung pengetahuan dari satu atau lebih pakar manusia mengenai suatu bidang spesifik.</p>
+                      <p>Sistem pakar adalah suatu program komputer yang mengandung pengetahuan dari satu atau lebih pakar manusia mengenai suatu bidang spesifik.</p>
                     </div>
                   </div>
               </div>
@@ -67,4 +63,8 @@
     </div>
 
 </body>
+
+<footer class="container" align="right">
+System Pakar 2014
+</footer>
 </html>
