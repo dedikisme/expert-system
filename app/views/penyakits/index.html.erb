@@ -1,4 +1,16 @@
 <h1>Listing penyakits</h1>
+<% if @er!=nil %>
+<div class="alert alert-block alert-error fade in">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <h4 class="alert-heading">Terjadi Kesalahan!</h4>
+            <p>Penyakit 
+                <% @er.each do | data | %>
+                    (<a href="/penyakits/<%= data._id %>"><%= data.nama %></a>)  
+                <% end %> memiliki gejala yang sama
+                <p>
+            </p>
+          </div>
+<% end %>
 <%= link_to 'New Penyakit', new_penyakit_path, :class=> "btn btn-primary" %>
 
 <button ng-click="tableParams.sorting({})" class="btn btn-default pull-right">Clear sorting</button>

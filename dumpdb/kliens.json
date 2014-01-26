@@ -1,0 +1,4 @@
+{ "_id" : { "$oid" : "52d6cc1a6c6f631069070000" }, "nama" : "Dedy", "alamat" : "Gresik", "email" : "info@dedikisme.com", "ip" : "127.0.0.1" }
+{ "_id" : { "$oid" : "52d6cc1a6c6f631069080000" }, "nama" : "Dedy", "alamat" : "Gresik", "email" : "info@dedikisme.com", "ip" : "127.0.0.1", "penyakit_id" : { "$oid" : "52ca81a66c6f631807950000" } }
+{ "_id" : { "$oid" : "52d6ccc26c6f631069090000" }, "nama" : "Dedy", "alamat" : "Gresik", "email" : "", "ip" : "127.0.0.1" }
+{ "_id" : { "$oid" : "52d6ccc26c6f6310690a0000" }, "nama" : "Dedy", "alamat" : "Gresik", "email" : "", "ip" : "127.0.0.1", "penyakit_id" : { "$oid" : "52ca81a66c6f631807940000" } }

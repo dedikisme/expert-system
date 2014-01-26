@@ -1,0 +1,71 @@
+{ "_id" : { "$oid" : "52ca7e026c6f6318074b0000" }, "nama" : "CPU Mati", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079a0000" }, { "$oid" : "52ca81a66c6f6318079f0000" } ] }
+{ "_id" : { "$oid" : "52ca7e026c6f6318074c0000" }, "nama" : "Komputer sering Hang", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079b0000" }, { "$oid" : "52ca81a66c6f6318079c0000" }, { "$oid" : "52ca81a66c6f6318079d0000" }, { "$oid" : "52ca81a66c6f6318079e0000" }, { "$oid" : "52ca81a66c6f6318079f0000" }, { "$oid" : "52ca81a66c6f631807a10000" }, { "$oid" : "52ca81a66c6f631807a40000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318074d0000" }, "nama" : "Komputer sering restart", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079a0000" }, { "$oid" : "52ca81a66c6f6318079c0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318074e0000" }, "nama" : "Komputer menjadi lambat", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079c0000" }, { "$oid" : "52ca81a66c6f6318079d0000" }, { "$oid" : "52ca81a66c6f6318079f0000" }, { "$oid" : "52ca81a66c6f631807a00000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807500000" }, "nama" : "Monitor tidak menampilkan gambar sama sekali", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807940000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807510000" }, "nama" : "Tidak ada warna di monitor", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807970000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807520000" }, "nama" : "Lampu indikator monitor hidup layar gelap", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807950000" }, { "$oid" : "52ca81a66c6f631807980000" }, { "$oid" : "52ca81a66c6f631807990000" }, { "$oid" : "52ca81a66c6f6318079e0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807530000" }, "nama" : "Raster monitor satu garis horizontal", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807980000" }, { "$oid" : "52ca81a66c6f631807960000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807540000" }, "nama" : "Setting BIOS selalu berubah", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079b0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807550000" }, "nama" : "Processor tidak terdeteksi di BIOS Cek", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079c0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807560000" }, "nama" : "Kipas processor tidak berputar", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079a0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807570000" }, "nama" : "Harddisk tidak terdeteksi", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079d0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807580000" }, "nama" : "VGA tidak dikenali", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079e0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807590000" }, "nama" : "Terdengar bunyi beep tidak terputus" }
+{ "_id" : { "$oid" : "52ca7e036c6f6318075a0000" }, "nama" : "Terdengar bunyi beep panjang berkali-kali", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079f0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318075b0000" }, "nama" : "CD/DVD Room tidak terdeteksi", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a00000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318075c0000" }, "nama" : "Lampu indikator CD/DVD Room tidak menyala", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a00000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318075d0000" }, "nama" : "Sound Card tidak dikenali", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a10000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318075e0000" }, "nama" : "LED indikator FDD menyala terus", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a40000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318075f0000" }, "nama" : "Jam dan tanggal di komputer tidak sesuai", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079b0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807600000" }, "nama" : "USB port tidak terdeteksi", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079b0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807610000" }, "nama" : "Harddisk tidak dapat diformat", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079d0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807620000" }, "nama" : "Kapasitas harddisk tidak normal", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079d0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807630000" }, "nama" : "Terdengar bunyi beep 1 kali panjang dan 3 kali pendek", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079e0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807640000" }, "nama" : "Terdengar bunyi beep tidak terputus", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079f0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807650000" }, "nama" : "CD/DVD Room tidak bisa membaca/menulis CD/DVD", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a00000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807660000" }, "nama" : "Komputer tidak ada suaranya", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a10000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807670000" }, "nama" : "Mouse tidak terdeteksi", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079c0000" }, { "$oid" : "52ca81a66c6f631807a20000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807680000" }, "nama" : "Ada pesan \"Keyboard Failure\"", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a50000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807690000" }, "nama" : "Harddisk kesulitan membaca daerah tertentu", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079d0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318076a0000" }, "nama" : "Motor FDD berputar tapi disket tidak ikut berputar", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a40000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318076b0000" }, "nama" : "FDD tidak bisa membaca dan menulis", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a40000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318076c0000" }, "nama" : "FDD tidak terdeteksi di BIOS", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a40000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318076d0000" }, "nama" : "Pointer mouse tidak jalan", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a20000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318076e0000" }, "nama" : "CD/DVD tidak bisa berputar di dalam CD/DVD Room", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a00000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318076f0000" }, "nama" : "CD/DVD tidak bisa keluar masuk", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a00000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807700000" }, "nama" : "Resolusi Layar monitor tidak stabil atau berubah-ubah", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079e0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807710000" }, "nama" : "Ada titik-titik kecil di layar monitor", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079e0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807720000" }, "nama" : "Harddisk berbunyi keras", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079d0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807730000" }, "nama" : "Harddisk terdeteksi tetapi tidak terbaca kapasitasnya", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f6318079d0000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807740000" }, "nama" : "Ada bercak-bercak warna pada layar monitor", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807990000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807750000" }, "nama" : "Ada blanking berwarna merah/hijau/biru di monitor", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807990000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807760000" }, "nama" : "Pada saat power monitor diOFF kan ada cahaya di layar seperti korek api", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807990000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807770000" }, "nama" : "Filamen monitor tidak menyala", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807990000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807780000" }, "nama" : "Gambar monitor redup/gelap", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807990000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807790000" }, "nama" : "Gambar monitor miring ke kiri atau ke kanan", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807980000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318077a0000" }, "nama" : "Gambar monitor berbentuk lingkaran", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807980000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318077b0000" }, "nama" : "Gambar monitor berbentuk travesium", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807980000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318077d0000" }, "nama" : "Raster monitor satu garis vertikal", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807980000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318077e0000" }, "nama" : "Warna gambar monitor tidak lengkap/warna dasar", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807970000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318077f0000" }, "nama" : "Gambar monitor tidak kelihatan tapi raster terang", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807970000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807800000" }, "nama" : "Gambar monitor tidak keluar atau kurang jelas", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807970000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807810000" }, "nama" : "Gambar monitor melebar bagian atas atau bawah", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807960000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807820000" }, "nama" : "Gambar monitor terlalu keatas atau ke bawah", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807960000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807830000" }, "nama" : "Gambar monitor memendek ketengah", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807960000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807840000" }, "nama" : "Gambar monitor naik turun tidak berhenti", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807960000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807850000" }, "nama" : "Gambar monitor lengkung dipinggir kiri dan kanan", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807950000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807860000" }, "nama" : "Gambar monitor redup/gelap", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807950000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807870000" }, "nama" : "Gambar monitor tidak fokus", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807950000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807880000" }, "nama" : "Gambar monitor terlalu kontras", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807950000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807890000" }, "nama" : "Gambar monitor garis-garis", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807950000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318078a0000" }, "nama" : "Gambar monitor melebar bagian kiri dan kanan", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807950000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318078b0000" }, "nama" : "Gambar monitor terlalu ke kiri atau ke kanan", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807950000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318078c0000" }, "nama" : "Gambar monitor bergetar", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807940000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318078d0000" }, "nama" : "Gambar monitor gelombang", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807940000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f6318078e0000" }, "nama" : "Kipas power supply tidak berputar" }
+{ "_id" : { "$oid" : "52ca7e036c6f6318078f0000" }, "nama" : "Beberapa tombol keyboard tidak berfungsi", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a50000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807900000" }, "nama" : "Keyboard tidak terdeteksi", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a50000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807910000" }, "nama" : "Anda tidak Memasukkan Gejala Kerusakan", "penyakit_ids" : [] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807920000" }, "nama" : "Boothing Lama", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a30000" } ] }
+{ "_id" : { "$oid" : "52ca7e036c6f631807930000" }, "nama" : "Tidak bisa Loading OS / Display blue screen", "penyakit_ids" : [ { "$oid" : "52ca81a66c6f631807a30000" } ] }

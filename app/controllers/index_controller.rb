@@ -2,7 +2,7 @@ class IndexController < ApplicationController
 	def index
 
 
-=begin
+
 
 		p=Penyakit.all
 		ar=[]
@@ -20,7 +20,6 @@ class IndexController < ApplicationController
 		d=[]
        ar.detect{ |e| (ar.count(e) > 1)? d.push(e) : nil ; }
 		@ar=d
-=end
 	end
 def kerusakan
 	@p=Penyakit.all

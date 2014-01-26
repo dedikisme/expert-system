@@ -7,6 +7,38 @@ class PenyakitsController < ApplicationController
   def index
 
     @penyakits = Penyakit.all
+    ar=[]
+    i=0
+
+    @penyakits.each do | datap |
+      ar[i]=[]
+      datap.gejalas.each do | datag |
+        ar[i].push(datag._id.to_s)
+      end
+      ar[i].sort
+      i+=1
+    end
+
+    d=[]
+    ar.detect{ |e| (ar.count(e) > 1)? d.push(e) : nil ; }
+
+    if d.count >0
+      ar = []
+      er=[]
+      g=Gejala.find(d)
+      g.each do | dag |
+        ar.push(dag) 
+      end
+      for i in 0..ar.count-1
+        if i!=0
+        er=er & ar[i].penyakits
+      else
+        er = ar[i].penyakits
+      end
+      end
+      @er=er
+
+    end
   end
 
   # GET /penyakits/1
@@ -18,52 +50,53 @@ class PenyakitsController < ApplicationController
   def jsonp
     p=params[:idpenyakit]
     if p=='' or p==nil
-          datap = Penyakit.all.to_json
+      datap = Penyakit.all.to_json
 
-    render :json => datap, :callback => params[:callback]
-  else
+      render :json => datap, :callback => params[:callback]
+    else
 
-    datag=Gejala.all.to_a
-    datag.each do | data |
-      data.penyakits.each do | asd |
-        if asd._id.to_s==p
-          data["penyakit"]="checked"
+      datag=Gejala.all.to_a
+      datag.each do | data |
+        data.penyakits.each do | asd |
+          if asd._id.to_s==p
+            data["penyakit"]="checked"
+          end
         end
       end
-    end
-    
-    render :json => datag.as_json, :callback => params[:callback]
 
-  end
+      render :json => datag.as_json, :callback => params[:callback]
+
+    end
   end
 
   def gejala
-         ar=Array.new
-     @penyakit.gejalas.each do | data | 
-       ar.push(data._id)
-      end 
-  @ar=ar
-  @namapenyakit=@penyakit.nama
-    @gejala=Gejala.order_by()
+   ar=Array.new
+   @penyakit.gejalas.each do | data | 
+     ar.push(data._id)
+   end 
+   @ar=ar
+   @namapenyakit=@penyakit.nama
+   @gejala=Gejala.order_by()
 
-    
 
-    
-  end
 
-  def gejalaproses
-    data=params[:cekgejala]
-    @penyakit.gejalas = []
-    
-    if data!=nil
+
+ end
+
+ def gejalaproses
+  data=params[:cekgejala]
+  @penyakit.gejalas = []
+
+  if data!=nil
+
     data.each do | datag |
       @penyakit.gejalas << Gejala.find(datag)
     end
   end
-    @data=@penyakit.inspect
-    redirect_to @penyakit, notice: 'Penyakit was successfully editted.'
+  @data=@penyakit.inspect
+  redirect_to @penyakit, notice: 'Penyakit was successfully editted.'
 
-  end
+end
 
   # GET /penyakits/new
   def new
@@ -126,8 +159,8 @@ class PenyakitsController < ApplicationController
     end
 
     def ceklogin
-          if !user_signed_in? 
-          redirect_to "/users/sign_in", notice: 'belum login'
-        end
+      if !user_signed_in? 
+        redirect_to "/users/sign_in", notice: 'belum login'
+      end
     end
-end
+  end
